@@ -7,25 +7,30 @@
 import Swinject
 import SwinjectAutoregistration
 import UIKit
+import SwiftUI
 
 struct ViewProviderSwinject {
     let container: Container
 
     static func create() -> Self {
-        let container = Container()
-        return ViewProviderSwinject(container: container)
+        .init(container: Container())
     }
 }
 
 extension ViewProviderSwinject: ViewProvider {
 
     func provideDashboardViewController() -> UIViewController {
-        let assembler: Assembler = Assembler([ServiceAssembly(), DashboardAssembly()], container: container)
+        let assembler = Assembler([
+            ServiceAssembly(),
+            DashboardAssembly()
+        ], container: container)
         return assembler.resolver.resolve(DashboardViewController.self)!
     }
 
     func provideSettingsViewController() -> UIViewController {
-        fatalError()
+        let viewcontroller = UIHostingController(rootView: SettingsView())
+        viewcontroller.tabBarItem.title = "Settings"
+        return viewcontroller
     }
 }
 
@@ -38,7 +43,14 @@ class ServiceAssembly: Assembly {
 
 class DashboardAssembly: Assembly {
     func assemble(container: Container) {
-        container.autoregister(DashboardPresentering.self, initializer: DashboardPresenter.init)
+        let thePresenter = DashboardPresenter()
+        container.register(DashboardPresenter.self, factory: { _ in
+            thePresenter
+        })
+        container.register(DashboardPresentering.self, factory: { _ in
+            thePresenter
+        })
         container.autoregister(DashboardInteractoring.self, initializer: DashboardInteractor.init)
+        container.autoregister(DashboardViewController.self, initializer: DashboardViewController.init)
     }
 }

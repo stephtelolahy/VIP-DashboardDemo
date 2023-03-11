@@ -12,7 +12,7 @@ struct ViewProviderManual {
     let dashboardService: DashboardServicing
 
     static func create() -> Self {
-        ViewProviderManual(dashboardService: DashboardService())
+        .init(dashboardService: DashboardService())
     }
 }
 
