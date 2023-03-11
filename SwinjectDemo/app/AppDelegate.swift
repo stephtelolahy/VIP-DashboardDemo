@@ -13,10 +13,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+
         window = UIWindow(frame: UIScreen.main.bounds)
 
-        let dashboardViewController = DashboardViewController()
+        let dashboardViewController = AppEnvironment.shared.resolveDashboardViewController()
         let settingsViewController = SettingsViewController()
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = [dashboardViewController, settingsViewController]

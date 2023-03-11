@@ -5,6 +5,7 @@
 //  Created by Hugues Telolahy on 11/03/2023.
 //
 import Swinject
+import UIKit
 
 struct AppEnvironment {
     static let shared: Self = .init()
@@ -18,4 +19,11 @@ struct AppEnvironment {
 
 
 extension AppEnvironment {
+
+    func resolveDashboardViewController() -> UIViewController {
+        let service: DashboardServicing = container.resolve(DashboardServicing.self)!
+        let presenter = DashboardPresenter()
+        let interactor = DashboardInteractor(presenter: presenter, service: service)
+        return DashboardViewController(presenter: presenter, interactor: interactor)
+    }
 }
