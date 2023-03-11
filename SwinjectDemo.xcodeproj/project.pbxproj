@@ -13,6 +13,12 @@
 		26DDB38129BCC69E003288C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26DDB37F29BCC69E003288C8 /* LaunchScreen.storyboard */; };
 		26DDB38C29BCC69E003288C8 /* SwinjectDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DDB38B29BCC69E003288C8 /* SwinjectDemoTests.swift */; };
 		26DDB3B029BCC75B003288C8 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DDB3AF29BCC75B003288C8 /* AppEnvironment.swift */; };
+		26DDB3B329BCCA7A003288C8 /* DashboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DDB3B229BCCA7A003288C8 /* DashboardItem.swift */; };
+		26DDB3B629BCCB0D003288C8 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DDB3B529BCCB0D003288C8 /* DashboardViewController.swift */; };
+		26DDB3BB29BCCB71003288C8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DDB3BA29BCCB71003288C8 /* SettingsViewController.swift */; };
+		26DDB3BD29BCCB8E003288C8 /* DashboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DDB3BC29BCCB8E003288C8 /* DashboardService.swift */; };
+		26DDB3C029BCCC5B003288C8 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 26DDB3BF29BCCC5B003288C8 /* Swinject */; };
+		26DDB3C329BCCC69003288C8 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 26DDB3C229BCCC69003288C8 /* SwinjectAutoregistration */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +41,10 @@
 		26DDB38729BCC69E003288C8 /* SwinjectDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwinjectDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26DDB38B29BCC69E003288C8 /* SwinjectDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectDemoTests.swift; sourceTree = "<group>"; };
 		26DDB3AF29BCC75B003288C8 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		26DDB3B229BCCA7A003288C8 /* DashboardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardItem.swift; sourceTree = "<group>"; };
+		26DDB3B529BCCB0D003288C8 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		26DDB3BA29BCCB71003288C8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		26DDB3BC29BCCB8E003288C8 /* DashboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26DDB3C029BCCC5B003288C8 /* Swinject in Frameworks */,
+				26DDB3C329BCCC69003288C8 /* SwinjectAutoregistration in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,8 +88,10 @@
 		26DDB37329BCC69D003288C8 /* SwinjectDemo */ = {
 			isa = PBXGroup;
 			children = (
-				26DDB3AE29BCC749003288C8 /* DI */,
-				26DDB37429BCC69D003288C8 /* AppDelegate.swift */,
+				26DDB3AE29BCC749003288C8 /* app */,
+				26DDB3B929BCCB31003288C8 /* service */,
+				26DDB3B429BCCA93003288C8 /* ui */,
+				26DDB3B129BCCA68003288C8 /* model */,
 				26DDB37A29BCC69D003288C8 /* Main.storyboard */,
 				26DDB37F29BCC69E003288C8 /* LaunchScreen.storyboard */,
 				26DDB37D29BCC69E003288C8 /* Assets.xcassets */,
@@ -94,12 +108,54 @@
 			path = SwinjectDemoTests;
 			sourceTree = "<group>";
 		};
-		26DDB3AE29BCC749003288C8 /* DI */ = {
+		26DDB3AE29BCC749003288C8 /* app */ = {
 			isa = PBXGroup;
 			children = (
+				26DDB37429BCC69D003288C8 /* AppDelegate.swift */,
 				26DDB3AF29BCC75B003288C8 /* AppEnvironment.swift */,
 			);
-			path = DI;
+			path = app;
+			sourceTree = "<group>";
+		};
+		26DDB3B129BCCA68003288C8 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				26DDB3B229BCCA7A003288C8 /* DashboardItem.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		26DDB3B429BCCA93003288C8 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				26DDB3B729BCCB1E003288C8 /* dashboard */,
+				26DDB3B829BCCB24003288C8 /* settings */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		26DDB3B729BCCB1E003288C8 /* dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				26DDB3B529BCCB0D003288C8 /* DashboardViewController.swift */,
+			);
+			path = dashboard;
+			sourceTree = "<group>";
+		};
+		26DDB3B829BCCB24003288C8 /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				26DDB3BA29BCCB71003288C8 /* SettingsViewController.swift */,
+			);
+			path = settings;
+			sourceTree = "<group>";
+		};
+		26DDB3B929BCCB31003288C8 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				26DDB3BC29BCCB8E003288C8 /* DashboardService.swift */,
+			);
+			path = service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +175,8 @@
 			);
 			name = SwinjectDemo;
 			packageProductDependencies = (
+				26DDB3BF29BCCC5B003288C8 /* Swinject */,
+				26DDB3C229BCCC69003288C8 /* SwinjectAutoregistration */,
 			);
 			productName = SwinjectDemo;
 			productReference = 26DDB37129BCC69D003288C8 /* SwinjectDemo.app */;
@@ -171,6 +229,8 @@
 			);
 			mainGroup = 26DDB36829BCC69D003288C8;
 			packageReferences = (
+				26DDB3BE29BCCC5B003288C8 /* XCRemoteSwiftPackageReference "Swinject" */,
+				26DDB3C129BCCC69003288C8 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
 			);
 			productRefGroup = 26DDB37229BCC69D003288C8 /* Products */;
 			projectDirPath = "";
@@ -209,6 +269,10 @@
 			files = (
 				26DDB3B029BCC75B003288C8 /* AppEnvironment.swift in Sources */,
 				26DDB37529BCC69D003288C8 /* AppDelegate.swift in Sources */,
+				26DDB3B329BCCA7A003288C8 /* DashboardItem.swift in Sources */,
+				26DDB3BB29BCCB71003288C8 /* SettingsViewController.swift in Sources */,
+				26DDB3BD29BCCB8E003288C8 /* DashboardService.swift in Sources */,
+				26DDB3B629BCCB0D003288C8 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +551,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		26DDB3BE29BCCC5B003288C8 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.8.0;
+			};
+		};
+		26DDB3C129BCCC69003288C8 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/SwinjectAutoregistration.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		26DDB3BF29BCCC5B003288C8 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 26DDB3BE29BCCC5B003288C8 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		26DDB3C229BCCC69003288C8 /* SwinjectAutoregistration */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 26DDB3C129BCCC69003288C8 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
+			productName = SwinjectAutoregistration;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 26DDB36929BCC69D003288C8 /* Project object */;
 }
