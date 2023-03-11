@@ -25,7 +25,7 @@ extension ViewProviderSwinject: ViewProvider {
     }
 
     func provideSettingsViewController() -> UIViewController {
-        SettingsViewController()
+        fatalError()
     }
 }
 

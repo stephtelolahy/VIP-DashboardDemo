@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 struct ViewProviderManual {
     let dashboardService: DashboardServicing
@@ -25,6 +26,8 @@ extension ViewProviderManual: ViewProvider {
     }
     
     func provideSettingsViewController() -> UIViewController {
-        SettingsViewController()
+        let viewcontroller = UIHostingController(rootView: SettingsView())
+        viewcontroller.tabBarItem.title = "Settings"
+        return viewcontroller
     }
 }
