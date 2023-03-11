@@ -96,8 +96,7 @@
 			children = (
 				26DDB3AE29BCC749003288C8 /* app */,
 				26DDB3B929BCCB31003288C8 /* service */,
-				26DDB3B429BCCA93003288C8 /* ui */,
-				26DDB3B129BCCA68003288C8 /* model */,
+				26DDB3B429BCCA93003288C8 /* module */,
 				26DDB37F29BCC69E003288C8 /* LaunchScreen.storyboard */,
 				26DDB37D29BCC69E003288C8 /* Assets.xcassets */,
 				26DDB38229BCC69E003288C8 /* Info.plist */,
@@ -124,21 +123,13 @@
 			path = app;
 			sourceTree = "<group>";
 		};
-		26DDB3B129BCCA68003288C8 /* model */ = {
-			isa = PBXGroup;
-			children = (
-				26DDB3B229BCCA7A003288C8 /* DashboardItem.swift */,
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		26DDB3B429BCCA93003288C8 /* ui */ = {
+		26DDB3B429BCCA93003288C8 /* module */ = {
 			isa = PBXGroup;
 			children = (
 				26DDB3B729BCCB1E003288C8 /* dashboard */,
 				26DDB3B829BCCB24003288C8 /* settings */,
 			);
-			path = ui;
+			path = module;
 			sourceTree = "<group>";
 		};
 		26DDB3B729BCCB1E003288C8 /* dashboard */ = {
@@ -163,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				26DDB3BC29BCCB8E003288C8 /* DashboardService.swift */,
+				26DDB3B229BCCA7A003288C8 /* DashboardItem.swift */,
 			);
 			path = service;
 			sourceTree = "<group>";
