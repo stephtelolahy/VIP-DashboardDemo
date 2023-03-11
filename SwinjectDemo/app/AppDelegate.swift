@@ -14,13 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        window = UIWindow(frame: UIScreen.main.bounds)
-
-        let dashboardViewController = AppEnvironment.shared.resolveDashboardViewController()
-        let settingsViewController = SettingsViewController()
+        let dependencies: ViewProvider = ViewProviderManual.create()
+        let dashboardViewController = dependencies.provideDashboardViewController()
+        let settingsViewController = dependencies.provideSettingsViewController()
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = [dashboardViewController, settingsViewController]
 
+        window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
 
