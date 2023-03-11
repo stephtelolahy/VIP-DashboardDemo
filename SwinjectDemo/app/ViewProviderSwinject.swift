@@ -17,6 +17,22 @@ struct ViewProviderSwinject {
     }
 }
 
+class ServiceAssembly: Assembly {
+    func assemble(container: Container) {
+        container.autoregister(DashboardServicing.self, initializer: DashboardService.init)
+            .inObjectScope(.container)
+    }
+}
+
+class DashboardAssembly: Assembly {
+    func assemble(container: Container) {
+        container.register(DashboardPresenter.self) { _ in DashboardPresenter() }
+        container.register(DashboardPresentering.self) { r in r.resolve(DashboardPresenter.self)! }
+        container.autoregister(DashboardInteractoring.self, initializer: DashboardInteractor.init)
+        container.autoregister(DashboardViewController.self, initializer: DashboardViewController.init)
+    }
+}
+
 extension ViewProviderSwinject: ViewProvider {
 
     func provideDashboardViewController() -> UIViewController {
@@ -30,20 +46,5 @@ extension ViewProviderSwinject: ViewProvider {
 
     func provideSettingsView() -> SettingsView {
         SettingsView()
-    }
-}
-
-class ServiceAssembly: Assembly {
-    func assemble(container: Container) {
-        container.autoregister(DashboardServicing.self, initializer: DashboardService.init)
-    }
-}
-
-class DashboardAssembly: Assembly {
-    func assemble(container: Container) {
-        container.register(DashboardPresenter.self) { _ in DashboardPresenter() }
-        container.register(DashboardPresentering.self) { r in r.resolve(DashboardPresenter.self)! }
-        container.autoregister(DashboardInteractoring.self, initializer: DashboardInteractor.init)
-        container.autoregister(DashboardViewController.self, initializer: DashboardViewController.init)
     }
 }
