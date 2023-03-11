@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import SwiftUI
 
 protocol ViewProvider {
     func provideDashboardViewController() -> UIViewController
-    func provideSettingsViewController() -> UIViewController
+    func provideSettingsView() -> SettingsView
 }

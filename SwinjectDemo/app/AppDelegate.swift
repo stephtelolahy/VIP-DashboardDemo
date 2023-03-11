@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,8 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 //        let dependencies: ViewProvider = ViewProviderManual.create()
         let dependencies: ViewProvider = ViewProviderSwinject.create()
+
         let dashboardViewController = dependencies.provideDashboardViewController()
-        let settingsViewController = dependencies.provideSettingsViewController()
+        dashboardViewController.tabBarItem.title = "Dashboard"
+
+        let settingsView = dependencies.provideSettingsView()
+        let settingsViewController = UIHostingController(rootView: settingsView)
+        settingsViewController.tabBarItem.title = "Settings"
+
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = [dashboardViewController, settingsViewController]
 

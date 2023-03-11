@@ -24,10 +24,8 @@ extension ViewProviderManual: ViewProvider {
         let interactor = DashboardInteractor(presenter: presenter, service: service)
         return DashboardViewController(presenter: presenter, interactor: interactor)
     }
-    
-    func provideSettingsViewController() -> UIViewController {
-        let viewcontroller = UIHostingController(rootView: SettingsView())
-        viewcontroller.tabBarItem.title = "Settings"
-        return viewcontroller
+
+    func provideSettingsView() -> SettingsView {
+        SettingsView()
     }
 }
