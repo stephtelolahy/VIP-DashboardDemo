@@ -13,5 +13,10 @@ protocol DashboardServicing {
 
 struct DashboardService: DashboardServicing {
 
-    let dashboardItems: CurrentValueSubject<[DashboardItem], Never> = .init([])
+    let dashboardItems: CurrentValueSubject<[DashboardItem], Never> = .init([
+        DashboardItem(name: "Item1"),
+        DashboardItem(name: "Item2"),
+        DashboardItem(name: "Item3"),
+        DashboardItem(name: "Item4")
+    ])
 }

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		26DDB37529BCC69D003288C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DDB37429BCC69D003288C8 /* AppDelegate.swift */; };
-		26DDB37C29BCC69D003288C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26DDB37A29BCC69D003288C8 /* Main.storyboard */; };
 		26DDB37E29BCC69E003288C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26DDB37D29BCC69E003288C8 /* Assets.xcassets */; };
 		26DDB38129BCC69E003288C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26DDB37F29BCC69E003288C8 /* LaunchScreen.storyboard */; };
 		26DDB38C29BCC69E003288C8 /* SwinjectDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DDB38B29BCC69E003288C8 /* SwinjectDemoTests.swift */; };
@@ -34,7 +33,6 @@
 /* Begin PBXFileReference section */
 		26DDB37129BCC69D003288C8 /* SwinjectDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwinjectDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26DDB37429BCC69D003288C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		26DDB37B29BCC69D003288C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		26DDB37D29BCC69E003288C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26DDB38029BCC69E003288C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		26DDB38229BCC69E003288C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -92,7 +90,6 @@
 				26DDB3B929BCCB31003288C8 /* service */,
 				26DDB3B429BCCA93003288C8 /* ui */,
 				26DDB3B129BCCA68003288C8 /* model */,
-				26DDB37A29BCC69D003288C8 /* Main.storyboard */,
 				26DDB37F29BCC69E003288C8 /* LaunchScreen.storyboard */,
 				26DDB37D29BCC69E003288C8 /* Assets.xcassets */,
 				26DDB38229BCC69E003288C8 /* Info.plist */,
@@ -249,7 +246,6 @@
 			files = (
 				26DDB38129BCC69E003288C8 /* LaunchScreen.storyboard in Resources */,
 				26DDB37E29BCC69E003288C8 /* Assets.xcassets in Resources */,
-				26DDB37C29BCC69D003288C8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,14 +291,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		26DDB37A29BCC69D003288C8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				26DDB37B29BCC69D003288C8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		26DDB37F29BCC69E003288C8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -439,7 +427,6 @@
 				INFOPLIST_FILE = SwinjectDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -466,7 +453,6 @@
 				INFOPLIST_FILE = SwinjectDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
