@@ -14,7 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
+        // First option: manual dependency resolving
         let dependencies: ViewProvider = AppEnvironmentManual.create()
+
+        // Second option: swinject dependency resolving
 //        let dependencies: ViewProvider = ViewProviderSwinject.create()
 
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -22,12 +26,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
 
         return true
-    }
-}
-
-private extension UITabBarController {
-
-    func setup(dashboard: UIViewController, settings: UIViewController) {
-        
     }
 }

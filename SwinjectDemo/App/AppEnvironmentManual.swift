@@ -38,6 +38,9 @@ extension AppEnvironmentManual: ViewProvider {
     }
 
     func itemDetailsViewController(_ item: DashboardItem) -> UIViewController {
-        UIHostingController(rootView: ItemDetailsView())
+        let presenter = ItemDetailsPresenter()
+        let interactor = ItemDetailsInteractor(item: item, presenter: presenter)
+        let view = ItemDetailsView(presenter: presenter, interactor: interactor)
+        return UIHostingController(rootView: view)
     }
 }

@@ -26,8 +26,10 @@ struct DashboardItemView: View {
     }
 }
 
+#if DEBUG
 struct DashboardItemView_Previews: PreviewProvider {
     static var previews: some View {
         DashboardItemView(item: .item1)
     }
 }
+#endif

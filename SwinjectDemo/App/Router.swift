@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// Implementing UIKit navigation
 struct Router {
     weak var current: UIViewController?
     let dependencies: ViewProvider

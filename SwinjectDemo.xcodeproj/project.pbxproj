@@ -12,6 +12,8 @@
 		260876B429BCEBF3005E6ECE /* AppEnvironmentSwinject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260876B329BCEBF3005E6ECE /* AppEnvironmentSwinject.swift */; };
 		26868FE129BCF040009EB390 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26868FE029BCF040009EB390 /* SettingsView.swift */; };
 		269157FD29BE1DD400BBB9E9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269157FC29BE1DD400BBB9E9 /* MainViewController.swift */; };
+		26921BAF29BE27A600177727 /* ItemDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26921BAE29BE27A600177727 /* ItemDetailsPresenter.swift */; };
+		26921BB229BE2A2600177727 /* ItemDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26921BB129BE2A2600177727 /* ItemDetailsInteractor.swift */; };
 		26959F4829BD9F4700BCF3F7 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26959F4729BD9F4700BCF3F7 /* DashboardView.swift */; };
 		26959F4A29BDA50D00BCF3F7 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26959F4929BDA50D00BCF3F7 /* SettingsPresenter.swift */; };
 		26959F4C29BDA51700BCF3F7 /* SettingsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26959F4B29BDA51700BCF3F7 /* SettingsInteractor.swift */; };
@@ -47,6 +49,8 @@
 		260876B329BCEBF3005E6ECE /* AppEnvironmentSwinject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironmentSwinject.swift; sourceTree = "<group>"; };
 		26868FE029BCF040009EB390 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		269157FC29BE1DD400BBB9E9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		26921BAE29BE27A600177727 /* ItemDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsPresenter.swift; sourceTree = "<group>"; };
+		26921BB129BE2A2600177727 /* ItemDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsInteractor.swift; sourceTree = "<group>"; };
 		26959F4729BD9F4700BCF3F7 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		26959F4929BDA50D00BCF3F7 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
 		26959F4B29BDA51700BCF3F7 /* SettingsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInteractor.swift; sourceTree = "<group>"; };
@@ -93,6 +97,14 @@
 				269157FC29BE1DD400BBB9E9 /* MainViewController.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		26921BB029BE29EF00177727 /* Rows */ = {
+			isa = PBXGroup;
+			children = (
+				26E6F0F029BE12E500BDD584 /* DashboardItemView.swift */,
+			);
+			path = Rows;
 			sourceTree = "<group>";
 		};
 		26DDB36829BCC69D003288C8 = {
@@ -160,11 +172,11 @@
 		26DDB3B729BCCB1E003288C8 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				26921BB029BE29EF00177727 /* Rows */,
 				26959F4729BD9F4700BCF3F7 /* DashboardView.swift */,
 				26DDB3C429BCD10A003288C8 /* DashboardPresenter.swift */,
 				26DDB3C629BCD298003288C8 /* DashboardInteractor.swift */,
 				26E6F0E829BE019100BDD584 /* DashboardRouter.swift */,
-				26E6F0F029BE12E500BDD584 /* DashboardItemView.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -192,6 +204,8 @@
 			isa = PBXGroup;
 			children = (
 				26E6F0EE29BE045500BDD584 /* ItemDetailsView.swift */,
+				26921BAE29BE27A600177727 /* ItemDetailsPresenter.swift */,
+				26921BB129BE2A2600177727 /* ItemDetailsInteractor.swift */,
 			);
 			path = ItemDetail;
 			sourceTree = "<group>";
@@ -314,11 +328,13 @@
 				269157FD29BE1DD400BBB9E9 /* MainViewController.swift in Sources */,
 				26959F4829BD9F4700BCF3F7 /* DashboardView.swift in Sources */,
 				26E6F0E929BE019100BDD584 /* DashboardRouter.swift in Sources */,
+				26921BAF29BE27A600177727 /* ItemDetailsPresenter.swift in Sources */,
 				26E6F0ED29BE036F00BDD584 /* Router.swift in Sources */,
 				26959F4A29BDA50D00BCF3F7 /* SettingsPresenter.swift in Sources */,
 				26E6F0EF29BE045500BDD584 /* ItemDetailsView.swift in Sources */,
 				260876AE29BCE89D005E6ECE /* ViewProvider.swift in Sources */,
 				26DDB3C729BCD298003288C8 /* DashboardInteractor.swift in Sources */,
+				26921BB229BE2A2600177727 /* ItemDetailsInteractor.swift in Sources */,
 				26868FE129BCF040009EB390 /* SettingsView.swift in Sources */,
 				26959F4C29BDA51700BCF3F7 /* SettingsInteractor.swift in Sources */,
 			);

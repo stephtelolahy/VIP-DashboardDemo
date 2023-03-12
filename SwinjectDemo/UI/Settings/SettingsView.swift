@@ -29,9 +29,11 @@ struct SettingsView: View {
     }
 }
 
+#if DEBUG
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         let presenter = SettingsPresenter(status: "A-B-C")
         SettingsView(presenter: presenter, interactor: nil)
     }
 }
+#endif

@@ -27,7 +27,7 @@ struct DashboardView: View {
     }
 }
 
-
+#if DEBUG
 struct DashboardView_Previews: PreviewProvider {
     static var previews: some View {
         let data: [DashboardItem] = [.item1, .item2, .item3]
@@ -35,3 +35,4 @@ struct DashboardView_Previews: PreviewProvider {
         DashboardView(presenter: presenter, interactor: nil)
     }
 }
+#endif

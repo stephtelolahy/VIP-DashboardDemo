@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// Resolving Views
 protocol ViewProvider {
     func dashboardViewController() -> UIViewController
     func settingsViewController() -> UIViewController

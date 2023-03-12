@@ -8,13 +8,19 @@
 import SwiftUI
 
 struct ItemDetailsView: View {
+    @ObservedObject var presenter: ItemDetailsPresenter
+    let interactor: ItemDetailsInteracting?
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(presenter.title)
     }
 }
 
+#if DEBUG
 struct ItemDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        ItemDetailsView()
+        let presenter = ItemDetailsPresenter(title: "My item")
+        ItemDetailsView(presenter: presenter, interactor: nil)
     }
 }
+#endif
