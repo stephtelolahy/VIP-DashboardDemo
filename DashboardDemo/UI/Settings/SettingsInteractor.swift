@@ -24,10 +24,10 @@ class SettingsInteractor: SettingsInteractoring {
     init(presenter: SettingsPresentering, service: DashboardServicing) {
         self.presenter = presenter
         self.service = service
-        bindToDashboardItems()
+        observeDashboard()
     }
 
-    private func bindToDashboardItems() {
+    private func observeDashboard() {
         service.dashboardItems.sink { [weak self] items in
             self?.presenter.presentItems(items)
         }
