@@ -13,14 +13,15 @@ A Sample implementation of configurable Dashboard with use of VIP architecture
 
 ### Interactor
 - `struct`
-- Contains view's logic
+- Contains view's business logic
 - All dependencies are private
-- All dependencies are defined with constructor 
+- All dependencies are injected with constructor 
 - All data are initialized with constructor
+- Should never import UIKit or SwiftUI
 
 ### Presenter
 - `class`
-- Contains view's data
+- Contains view's data suitable for display
 - All properties are @Published
 - All properties have default value with constructor
 
@@ -28,4 +29,11 @@ A Sample implementation of configurable Dashboard with use of VIP architecture
 - `struct`
 - Fetching data from API or local storage
 
+### Router
+- `struct`
+- Contains navigation logic
 
+### Configurator
+- `struct`
+- Configuring VIP cycle
+- Creates all VIP componenets instances
