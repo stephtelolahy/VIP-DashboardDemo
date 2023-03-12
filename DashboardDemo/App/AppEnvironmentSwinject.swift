@@ -9,15 +9,21 @@ import SwinjectAutoregistration
 import UIKit
 import SwiftUI
 
+/// Trying to resolve dependencies with `Swinject`
+/// Notable Issues
+/// - Error prone
+/// - Complex resolving router
+/// - Complex passing arguments
+
 struct AppEnvironmentSwinject {
     let container: Container
-    
+
     static func create() -> Self {
         .init(container: Container() { container in
             registerSharedServices(container)
         })
     }
-    
+
     static func registerSharedServices(_ container: Container) {
         container.register(DashboardServicing.self) { _ in
             DashboardService()
@@ -54,13 +60,7 @@ private class ItemAssembly: Assembly {
     }
 }
 
-
-extension AppEnvironmentSwinject: ViewProvider {
-
-    /// Issues using swinject
-    /// - Error prone
-    /// - Complex resolving router
-    /// - Complex passing arguments
+extension AppEnvironmentSwinject: DashboardConfigurator {
 
     func dashboardViewController() -> UIViewController {
         let assembler = Assembler([
@@ -71,19 +71,22 @@ extension AppEnvironmentSwinject: ViewProvider {
         return viewController
     }
 
-    func settingsViewController() -> UIViewController {
-        let assembler = Assembler([
-            SettingsAssembly()
-        ], container: container)
-        let view = assembler.resolver.resolve(SettingsView.self)!
-        return UIHostingController(rootView: view)
-    }
-
     func detailsViewController(for item: DashboardItem) -> UIViewController {
         let assembler = Assembler([
             ItemAssembly()
         ], container: container)
         let view = assembler.resolver.resolve(ItemDetailsView.self)!
+        return UIHostingController(rootView: view)
+    }
+}
+
+extension AppEnvironmentSwinject: SettingsConfigurator {
+
+    func settingsViewController() -> UIViewController {
+        let assembler = Assembler([
+            SettingsAssembly()
+        ], container: container)
+        let view = assembler.resolver.resolve(SettingsView.self)!
         return UIHostingController(rootView: view)
     }
 }

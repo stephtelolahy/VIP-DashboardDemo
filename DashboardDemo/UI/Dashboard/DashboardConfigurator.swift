@@ -1,22 +1,18 @@
 //
-//  DIContainerManual.swift
-//  SwinjectDemo
+//  DashboardConfigurator.swift
+//  DashboardDemo
 //
-//  Created by Hugues Telolahy on 11/03/2023.
+//  Created by Hugues Telolahy on 12/03/2023.
 //
-
 import UIKit
 import SwiftUI
 
-struct AppEnvironmentManual {
-    let dashboardService: DashboardServicing
-
-    static func create() -> Self {
-        .init(dashboardService: DashboardService())
-    }
+protocol DashboardConfigurator {
+    func dashboardViewController() -> UIViewController
+    func detailsViewController(for item: DashboardItem) -> UIViewController
 }
 
-extension AppEnvironmentManual: ViewProvider {
+extension AppEnvironment: DashboardConfigurator {
 
     func dashboardViewController() -> UIViewController {
         let service: DashboardServicing = dashboardService
@@ -25,19 +21,11 @@ extension AppEnvironmentManual: ViewProvider {
         let viewController = UIHostingController(rootView: view)
 
         // configuring view
-        let router = Router(source: viewController, dependencies: self)
+        let router = DashboardRouter(source: viewController, dependencies: self)
         view.interactor = DashboardInteractor(presenter: presenter, service: service, router: router)
         viewController.rootView = view
 
         return viewController
-    }
-
-    func settingsViewController() -> UIViewController {
-        let service: DashboardServicing = dashboardService
-        let presenter = SettingsPresenter()
-        let interactor = SettingsInteractor(presenter: presenter, service: service)
-        let view = SettingsView(presenter: presenter, interactor: interactor)
-        return UIHostingController(rootView: view)
     }
 
     func detailsViewController(for item: DashboardItem) -> UIViewController {

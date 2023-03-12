@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		260876AE29BCE89D005E6ECE /* ViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260876AD29BCE89D005E6ECE /* ViewProvider.swift */; };
-		260876B229BCEAB3005E6ECE /* AppEnvironmentManual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260876B129BCEAB3005E6ECE /* AppEnvironmentManual.swift */; };
+		260876B229BCEAB3005E6ECE /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260876B129BCEAB3005E6ECE /* AppEnvironment.swift */; };
 		260876B429BCEBF3005E6ECE /* AppEnvironmentSwinject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260876B329BCEBF3005E6ECE /* AppEnvironmentSwinject.swift */; };
 		267B3E6C29BE356A00B37B86 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 267B3E6B29BE356A00B37B86 /* README.md */; };
 		26868FE129BCF040009EB390 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26868FE029BCF040009EB390 /* SettingsView.swift */; };
-		269157FD29BE1DD400BBB9E9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269157FC29BE1DD400BBB9E9 /* MainViewController.swift */; };
 		26921BAF29BE27A600177727 /* ItemDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26921BAE29BE27A600177727 /* ItemDetailsPresenter.swift */; };
 		26921BB229BE2A2600177727 /* ItemDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26921BB129BE2A2600177727 /* ItemDetailsInteractor.swift */; };
 		26959F4829BD9F4700BCF3F7 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26959F4729BD9F4700BCF3F7 /* DashboardView.swift */; };
 		26959F4A29BDA50D00BCF3F7 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26959F4929BDA50D00BCF3F7 /* SettingsPresenter.swift */; };
 		26959F4C29BDA51700BCF3F7 /* SettingsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26959F4B29BDA51700BCF3F7 /* SettingsInteractor.swift */; };
+		2698158F29BE7206005AFDB5 /* DashboardConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698158E29BE7206005AFDB5 /* DashboardConfigurator.swift */; };
+		2698159129BE727D005AFDB5 /* SettingsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698159029BE727D005AFDB5 /* SettingsConfigurator.swift */; };
+		2698159329BE7714005AFDB5 /* TabBarConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698159229BE7714005AFDB5 /* TabBarConfigurator.swift */; };
 		26DDB37529BCC69D003288C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DDB37429BCC69D003288C8 /* AppDelegate.swift */; };
 		26DDB37E29BCC69E003288C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26DDB37D29BCC69E003288C8 /* Assets.xcassets */; };
 		26DDB38129BCC69E003288C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26DDB37F29BCC69E003288C8 /* LaunchScreen.storyboard */; };
@@ -29,7 +30,6 @@
 		26DDB3C529BCD10A003288C8 /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DDB3C429BCD10A003288C8 /* DashboardPresenter.swift */; };
 		26DDB3C729BCD298003288C8 /* DashboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DDB3C629BCD298003288C8 /* DashboardInteractor.swift */; };
 		26E6F0E929BE019100BDD584 /* DashboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E6F0E829BE019100BDD584 /* DashboardRouter.swift */; };
-		26E6F0ED29BE036F00BDD584 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E6F0EC29BE036F00BDD584 /* Router.swift */; };
 		26E6F0EF29BE045500BDD584 /* ItemDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E6F0EE29BE045500BDD584 /* ItemDetailsView.swift */; };
 		26E6F0F129BE12E500BDD584 /* DashboardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E6F0F029BE12E500BDD584 /* DashboardItemView.swift */; };
 /* End PBXBuildFile section */
@@ -45,17 +45,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		260876AD29BCE89D005E6ECE /* ViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProvider.swift; sourceTree = "<group>"; };
-		260876B129BCEAB3005E6ECE /* AppEnvironmentManual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironmentManual.swift; sourceTree = "<group>"; };
+		260876B129BCEAB3005E6ECE /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		260876B329BCEBF3005E6ECE /* AppEnvironmentSwinject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironmentSwinject.swift; sourceTree = "<group>"; };
 		267B3E6B29BE356A00B37B86 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		26868FE029BCF040009EB390 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		269157FC29BE1DD400BBB9E9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		26921BAE29BE27A600177727 /* ItemDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsPresenter.swift; sourceTree = "<group>"; };
 		26921BB129BE2A2600177727 /* ItemDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsInteractor.swift; sourceTree = "<group>"; };
 		26959F4729BD9F4700BCF3F7 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		26959F4929BDA50D00BCF3F7 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
 		26959F4B29BDA51700BCF3F7 /* SettingsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInteractor.swift; sourceTree = "<group>"; };
+		2698158E29BE7206005AFDB5 /* DashboardConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardConfigurator.swift; sourceTree = "<group>"; };
+		2698159029BE727D005AFDB5 /* SettingsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsConfigurator.swift; sourceTree = "<group>"; };
+		2698159229BE7714005AFDB5 /* TabBarConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarConfigurator.swift; sourceTree = "<group>"; };
 		26DDB37129BCC69D003288C8 /* DashboardDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DashboardDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26DDB37429BCC69D003288C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26DDB37D29BCC69E003288C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,7 +69,6 @@
 		26DDB3C429BCD10A003288C8 /* DashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
 		26DDB3C629BCD298003288C8 /* DashboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardInteractor.swift; sourceTree = "<group>"; };
 		26E6F0E829BE019100BDD584 /* DashboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRouter.swift; sourceTree = "<group>"; };
-		26E6F0EC29BE036F00BDD584 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		26E6F0EE29BE045500BDD584 /* ItemDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsView.swift; sourceTree = "<group>"; };
 		26E6F0F029BE12E500BDD584 /* DashboardItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,20 +93,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		269157FB29BE1DBD00BBB9E9 /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
-				269157FC29BE1DD400BBB9E9 /* MainViewController.swift */,
-			);
-			path = TabBar;
-			sourceTree = "<group>";
-		};
 		26921BB029BE29EF00177727 /* Rows */ = {
 			isa = PBXGroup;
 			children = (
 				26E6F0F029BE12E500BDD584 /* DashboardItemView.swift */,
 			);
 			path = Rows;
+			sourceTree = "<group>";
+		};
+		2698159429BE778A005AFDB5 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				2698159229BE7714005AFDB5 /* TabBarConfigurator.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		26DDB36829BCC69D003288C8 = {
@@ -153,10 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				26DDB37429BCC69D003288C8 /* AppDelegate.swift */,
-				260876B129BCEAB3005E6ECE /* AppEnvironmentManual.swift */,
+				260876B129BCEAB3005E6ECE /* AppEnvironment.swift */,
 				260876B329BCEBF3005E6ECE /* AppEnvironmentSwinject.swift */,
-				26E6F0EC29BE036F00BDD584 /* Router.swift */,
-				260876AD29BCE89D005E6ECE /* ViewProvider.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -164,9 +162,8 @@
 		26DDB3B429BCCA93003288C8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				269157FB29BE1DBD00BBB9E9 /* TabBar */,
+				2698159429BE778A005AFDB5 /* TabBar */,
 				26DDB3B729BCCB1E003288C8 /* Dashboard */,
-				26E6F0EA29BE025400BDD584 /* ItemDetail */,
 				26DDB3B829BCCB24003288C8 /* Settings */,
 			);
 			path = UI;
@@ -175,11 +172,13 @@
 		26DDB3B729BCCB1E003288C8 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				26E6F0EA29BE025400BDD584 /* ItemDetail */,
 				26921BB029BE29EF00177727 /* Rows */,
 				26959F4729BD9F4700BCF3F7 /* DashboardView.swift */,
 				26DDB3C429BCD10A003288C8 /* DashboardPresenter.swift */,
 				26DDB3C629BCD298003288C8 /* DashboardInteractor.swift */,
 				26E6F0E829BE019100BDD584 /* DashboardRouter.swift */,
+				2698158E29BE7206005AFDB5 /* DashboardConfigurator.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -190,6 +189,7 @@
 				26868FE029BCF040009EB390 /* SettingsView.swift */,
 				26959F4929BDA50D00BCF3F7 /* SettingsPresenter.swift */,
 				26959F4B29BDA51700BCF3F7 /* SettingsInteractor.swift */,
+				2698159029BE727D005AFDB5 /* SettingsConfigurator.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -325,20 +325,20 @@
 				26DDB37529BCC69D003288C8 /* AppDelegate.swift in Sources */,
 				26DDB3B329BCCA7A003288C8 /* DashboardItem.swift in Sources */,
 				26DDB3C529BCD10A003288C8 /* DashboardPresenter.swift in Sources */,
-				260876B229BCEAB3005E6ECE /* AppEnvironmentManual.swift in Sources */,
+				260876B229BCEAB3005E6ECE /* AppEnvironment.swift in Sources */,
+				2698159329BE7714005AFDB5 /* TabBarConfigurator.swift in Sources */,
 				260876B429BCEBF3005E6ECE /* AppEnvironmentSwinject.swift in Sources */,
 				26E6F0F129BE12E500BDD584 /* DashboardItemView.swift in Sources */,
 				26DDB3BD29BCCB8E003288C8 /* DashboardService.swift in Sources */,
-				269157FD29BE1DD400BBB9E9 /* MainViewController.swift in Sources */,
 				26959F4829BD9F4700BCF3F7 /* DashboardView.swift in Sources */,
 				26E6F0E929BE019100BDD584 /* DashboardRouter.swift in Sources */,
 				26921BAF29BE27A600177727 /* ItemDetailsPresenter.swift in Sources */,
-				26E6F0ED29BE036F00BDD584 /* Router.swift in Sources */,
 				26959F4A29BDA50D00BCF3F7 /* SettingsPresenter.swift in Sources */,
 				26E6F0EF29BE045500BDD584 /* ItemDetailsView.swift in Sources */,
-				260876AE29BCE89D005E6ECE /* ViewProvider.swift in Sources */,
 				26DDB3C729BCD298003288C8 /* DashboardInteractor.swift in Sources */,
 				26921BB229BE2A2600177727 /* ItemDetailsInteractor.swift in Sources */,
+				2698158F29BE7206005AFDB5 /* DashboardConfigurator.swift in Sources */,
+				2698159129BE727D005AFDB5 /* SettingsConfigurator.swift in Sources */,
 				26868FE129BCF040009EB390 /* SettingsView.swift in Sources */,
 				26959F4C29BDA51700BCF3F7 /* SettingsInteractor.swift in Sources */,
 			);

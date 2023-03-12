@@ -13,15 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    /// Choosing dependency resolver
-    private var dependencies: ViewProvider {
-        AppEnvironmentManual.create()
+    private var dependencies: TabBarConfigurator {
+        AppEnvironment.create()
 //        AppEnvironmentSwinject.create()
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = MainViewController(dependencies: dependencies)
+        window?.rootViewController = UITabBarController().configure(with: dependencies)
         window?.makeKeyAndVisible()
 
         return true
