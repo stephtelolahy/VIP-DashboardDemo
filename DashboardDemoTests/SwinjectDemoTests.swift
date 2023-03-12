@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import SwinjectDemo
+@testable import DashboardDemo
 
 final class SwinjectDemoTests: XCTestCase {
 

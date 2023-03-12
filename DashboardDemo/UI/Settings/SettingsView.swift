@@ -15,7 +15,6 @@ struct SettingsView: View {
         NavigationView {
             VStack(spacing: 30) {
                 Text(presenter.status)
-                    .font(.headline)
                 Button {
                     interactor?.onReorder()
                 } label: {
@@ -32,7 +31,7 @@ struct SettingsView: View {
 #if DEBUG
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        let presenter = SettingsPresenter(status: "A-B-C")
+        let presenter = SettingsPresenter(status: "A - B - C")
         SettingsView(presenter: presenter, interactor: nil)
     }
 }
