@@ -15,8 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        let dependencies: ViewProvider = ViewProviderManual.create()
-//        let dependencies: ViewProvider = ViewProviderSwinject.create()
+//        let dependencies: ViewProvider = ViewProviderManual.create()
+        let dependencies: ViewProvider = ViewProviderSwinject.create()
 
         let dashboardView = dependencies.provideDashboardView()
         let dashboardViewController = UIHostingController(rootView: dashboardView)
