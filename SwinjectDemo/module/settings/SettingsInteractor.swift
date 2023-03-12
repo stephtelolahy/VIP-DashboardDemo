@@ -5,6 +5,8 @@
 //  Created by Hugues Telolahy on 12/03/2023.
 //
 
+import Combine
+
 protocol SettingsInteractoring {
     func onReorder()
 }
@@ -13,10 +15,11 @@ protocol SettingsPresentering {
     func presentItems(_ items: [DashboardItem])
 }
 
-struct SettingsInteractor: SettingsInteractoring {
+class SettingsInteractor: SettingsInteractoring {
 
     private let presenter: SettingsPresentering
     private let service: DashboardServicing
+    private var cancellables = Set<AnyCancellable>()
 
     init(presenter: SettingsPresentering, service: DashboardServicing) {
         self.presenter = presenter
@@ -25,10 +28,10 @@ struct SettingsInteractor: SettingsInteractoring {
     }
 
     private func bindToDashboardItems() {
-        // TODO: make interactor stateless
-        _ = service.dashboardItems.sink { items in
-            presenter.presentItems(items)
+        service.dashboardItems.sink { [weak self] items in
+            self?.presenter.presentItems(items)
         }
+        .store(in: &cancellables)
     }
 
     func onReorder() {
