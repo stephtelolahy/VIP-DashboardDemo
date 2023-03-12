@@ -31,4 +31,8 @@ extension ViewProviderManual: ViewProvider {
         let interactor = SettingsInteractor(presenter: presenter, service: service)
         return SettingsView(presenter: presenter, interactor: interactor)
     }
+
+    func provideItemDetailsView(_ item: DashboardItem) -> ItemDetailsView {
+        ItemDetailsView()
+    }
 }

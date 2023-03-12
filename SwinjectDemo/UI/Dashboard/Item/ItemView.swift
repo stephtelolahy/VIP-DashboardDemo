@@ -14,8 +14,12 @@ struct ItemView: View {
         HStack {
             Text(item.rawValue)
             Spacer()
-            Image(systemName: "info.circle")
-                .foregroundColor(.blue)
+            Button {
+                print("Button was tapped")
+            } label: {
+                Image(systemName: "info.circle")
+                    .foregroundColor(.blue)
+            }
         }
         .padding()
     }

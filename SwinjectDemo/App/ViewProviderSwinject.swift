@@ -59,4 +59,8 @@ extension ViewProviderSwinject: ViewProvider {
         ], container: container)
         return assembler.resolver.resolve(SettingsView.self)!
     }
+
+    func provideItemDetailsView(_ item: DashboardItem) -> ItemDetailsView {
+        ItemDetailsView()
+    }
 }

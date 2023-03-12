@@ -11,4 +11,5 @@ import SwiftUI
 protocol ViewProvider {
     func provideDashboardView() -> DashboardView
     func provideSettingsView() -> SettingsView
+    func provideItemDetailsView(_ item: DashboardItem) -> ItemDetailsView
 }
