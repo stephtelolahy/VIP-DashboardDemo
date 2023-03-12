@@ -14,17 +14,22 @@ struct DashboardView: View {
     var body: some View {
         NavigationView {
             List(presenter.items, id: \.self) { item in
-                Text(item)
+                rowView(for: item)
             }
             .navigationTitle("Dashboard")
         }
+    }
+
+    func rowView(for item: DashboardItem) -> some View {
+        ItemView(item: item)
     }
 }
 
 
 struct DashboardView_Previews: PreviewProvider {
     static var previews: some View {
-        let presenter = DashboardPresenter(items: ["Item1", "Item2", "Item3"])
+        let data: [DashboardItem] = [.item1, .item2, .item3]
+        let presenter = DashboardPresenter(items: data)
         DashboardView(presenter: presenter, interactor: nil)
     }
 }

@@ -7,9 +7,9 @@
 import Combine
 
 class DashboardPresenter: ObservableObject {
-    @Published var items: [String]
+    @Published var items: [DashboardItem]
 
-    init(items: [String] = []) {
+    init(items: [DashboardItem] = []) {
         self.items = items
     }
 }
@@ -17,6 +17,6 @@ class DashboardPresenter: ObservableObject {
 extension DashboardPresenter: DashboardPresentering {
 
     func presentItems(_ objects: [DashboardItem]) {
-        items = objects.map(\.rawValue)
+        items = objects
     }
 }
