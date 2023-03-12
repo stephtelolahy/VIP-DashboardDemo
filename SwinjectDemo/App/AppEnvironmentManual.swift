@@ -1,5 +1,5 @@
 //
-//  ViewProviderManual.swift
+//  DIContainerManual.swift
 //  SwinjectDemo
 //
 //  Created by Hugues Telolahy on 11/03/2023.
@@ -8,7 +8,7 @@
 import UIKit
 import SwiftUI
 
-struct ViewProviderManual {
+struct AppEnvironmentManual {
     let dashboardService: DashboardServicing
 
     static func create() -> Self {
@@ -16,9 +16,9 @@ struct ViewProviderManual {
     }
 }
 
-extension ViewProviderManual: ViewProvider {
+extension AppEnvironmentManual: ViewProvider {
 
-    func provideDashboardViewController() -> UIViewController {
+    func dashboardViewController() -> UIViewController {
         let service: DashboardServicing = dashboardService
         let presenter = DashboardPresenter()
         let interactor = DashboardInteractor(presenter: presenter, service: service)
@@ -29,7 +29,7 @@ extension ViewProviderManual: ViewProvider {
         return viewController
     }
 
-    func provideSettingsViewController() -> UIViewController {
+    func settingsViewController() -> UIViewController {
         let service: DashboardServicing = dashboardService
         let presenter = SettingsPresenter()
         let interactor = SettingsInteractor(presenter: presenter, service: service)
@@ -37,7 +37,7 @@ extension ViewProviderManual: ViewProvider {
         return UIHostingController(rootView: view)
     }
 
-    func provideItemDetailsView(_ item: DashboardItem) -> ItemDetailsView {
-        ItemDetailsView()
+    func itemDetailsViewController(_ item: DashboardItem) -> UIViewController {
+        UIHostingController(rootView: ItemDetailsView())
     }
 }

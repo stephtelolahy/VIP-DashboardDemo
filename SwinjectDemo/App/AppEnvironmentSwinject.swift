@@ -9,7 +9,7 @@ import SwinjectAutoregistration
 import UIKit
 import SwiftUI
 
-struct ViewProviderSwinject {
+struct AppEnvironmentSwinject {
     let container: Container
     
     static func create() -> Self {
@@ -44,7 +44,7 @@ private class SettingsAssembly: Assembly {
     }
 }
 
-extension ViewProviderSwinject: ViewProvider {
+extension AppEnvironmentSwinject: ViewProvider {
     
 //    func provideDashboardView() -> DashboardView {
 //        let assembler = Assembler([
@@ -52,7 +52,7 @@ extension ViewProviderSwinject: ViewProvider {
 //        ], container: container)
 //        return assembler.resolver.resolve(DashboardView.self)!
 //    }
-    func provideDashboardViewController() -> UIViewController {
+    func dashboardViewController() -> UIViewController {
         fatalError()
     }
     
@@ -63,11 +63,11 @@ extension ViewProviderSwinject: ViewProvider {
 //        return assembler.resolver.resolve(SettingsView.self)!
 //    }
 
-    func provideSettingsViewController() -> UIViewController {
+    func settingsViewController() -> UIViewController {
         fatalError()
     }
 
-    func provideItemDetailsView(_ item: DashboardItem) -> ItemDetailsView {
-        ItemDetailsView()
+    func itemDetailsViewController(_ item: DashboardItem) -> UIViewController {
+        fatalError()
     }
 }
