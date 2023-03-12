@@ -7,7 +7,11 @@
 import Combine
 
 class DashboardPresenter: ObservableObject {
-    @Published var items: [String] = []
+    @Published var items: [String]
+
+    init(items: [String] = []) {
+        self.items = items
+    }
 }
 
 extension DashboardPresenter: DashboardPresentering {

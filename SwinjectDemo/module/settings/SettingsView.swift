@@ -8,13 +8,30 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @ObservedObject var presenter: SettingsPresenter
+    let interactor: SettingsInteractoring?
+
     var body: some View {
-        Text("Hello, World!")
+        NavigationView {
+            VStack(spacing: 30) {
+                Text("\(presenter.position)/\(presenter.count)")
+                    .font(.system(size: 64))
+                Button {
+                    interactor?.onReorder()
+                } label: {
+                    Text("Reorder")
+                }
+                .buttonStyle(.borderedProminent)
+
+            }
+            .navigationTitle("Settings")
+        }
     }
 }
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
+        let presenter = SettingsPresenter()
+        SettingsView(presenter: presenter, interactor: nil)
     }
 }

@@ -15,10 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-//        let dependencies: ViewProvider = ViewProviderManual.create()
-        let dependencies: ViewProvider = ViewProviderSwinject.create()
+        let dependencies: ViewProvider = ViewProviderManual.create()
+//        let dependencies: ViewProvider = ViewProviderSwinject.create()
 
-        let dashboardViewController = dependencies.provideDashboardViewController()
+        let dashboardView = dependencies.provideDashboardView()
+        let dashboardViewController = UIHostingController(rootView: dashboardView)
         dashboardViewController.tabBarItem.title = "Dashboard"
 
         let settingsView = dependencies.provideSettingsView()

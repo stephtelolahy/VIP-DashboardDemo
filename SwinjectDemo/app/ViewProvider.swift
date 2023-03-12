@@ -9,6 +9,6 @@ import UIKit
 import SwiftUI
 
 protocol ViewProvider {
-    func provideDashboardViewController() -> UIViewController
+    func provideDashboardView() -> DashboardView
     func provideSettingsView() -> SettingsView
 }
