@@ -11,16 +11,18 @@ import SwiftUI
 
 struct ViewProviderSwinject {
     let container: Container
-
+    
     static func create() -> Self {
-        .init(container: Container())
+        .init(container: Container() { container in
+            registerSharedServices(container)
+        })
     }
-}
-
-private class ServiceAssembly: Assembly {
-    func assemble(container: Container) {
-        container.autoregister(DashboardServicing.self, initializer: DashboardService.init)
-            .inObjectScope(.container)
+    
+    static func registerSharedServices(_ container: Container) {
+        container.register(DashboardServicing.self) { _ in
+            DashboardService()
+        }
+        .inObjectScope(.container)
     }
 }
 
@@ -43,22 +45,18 @@ private class SettingsAssembly: Assembly {
 }
 
 extension ViewProviderSwinject: ViewProvider {
-
+    
     func provideDashboardView() -> DashboardView {
-        let childContainer = Container(parent: container)
         let assembler = Assembler([
-            ServiceAssembly(),
             DashboardAssembly()
-        ], container: childContainer)
+        ], container: container)
         return assembler.resolver.resolve(DashboardView.self)!
     }
-
+    
     func provideSettingsView() -> SettingsView {
-        let childContainer = Container(parent: container)
         let assembler = Assembler([
-            ServiceAssembly(),
             SettingsAssembly()
-        ], container: childContainer)
+        ], container: container)
         return assembler.resolver.resolve(SettingsView.self)!
     }
 }
