@@ -21,7 +21,7 @@
 		26DDB37529BCC69D003288C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DDB37429BCC69D003288C8 /* AppDelegate.swift */; };
 		26DDB37E29BCC69E003288C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26DDB37D29BCC69E003288C8 /* Assets.xcassets */; };
 		26DDB38129BCC69E003288C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26DDB37F29BCC69E003288C8 /* LaunchScreen.storyboard */; };
-		26DDB38C29BCC69E003288C8 /* SwinjectDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DDB38B29BCC69E003288C8 /* SwinjectDemoTests.swift */; };
+		26DDB38C29BCC69E003288C8 /* DashboardDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DDB38B29BCC69E003288C8 /* DashboardDemoTests.swift */; };
 		26DDB3B329BCCA7A003288C8 /* DashboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DDB3B229BCCA7A003288C8 /* DashboardItem.swift */; };
 		26DDB3BD29BCCB8E003288C8 /* DashboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DDB3BC29BCCB8E003288C8 /* DashboardService.swift */; };
 		26DDB3C029BCCC5B003288C8 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 26DDB3BF29BCCC5B003288C8 /* Swinject */; };
@@ -62,7 +62,7 @@
 		26DDB38029BCC69E003288C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		26DDB38229BCC69E003288C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26DDB38729BCC69E003288C8 /* DashboardDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DashboardDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		26DDB38B29BCC69E003288C8 /* SwinjectDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectDemoTests.swift; sourceTree = "<group>"; };
+		26DDB38B29BCC69E003288C8 /* DashboardDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardDemoTests.swift; sourceTree = "<group>"; };
 		26DDB3B229BCCA7A003288C8 /* DashboardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardItem.swift; sourceTree = "<group>"; };
 		26DDB3BC29BCCB8E003288C8 /* DashboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardService.swift; sourceTree = "<group>"; };
 		26DDB3C429BCD10A003288C8 /* DashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 		26DDB38A29BCC69E003288C8 /* DashboardDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				26DDB38B29BCC69E003288C8 /* SwinjectDemoTests.swift */,
+				26DDB38B29BCC69E003288C8 /* DashboardDemoTests.swift */,
 			);
 			path = DashboardDemoTests;
 			sourceTree = "<group>";
@@ -348,7 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26DDB38C29BCC69E003288C8 /* SwinjectDemoTests.swift in Sources */,
+				26DDB38C29BCC69E003288C8 /* DashboardDemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
