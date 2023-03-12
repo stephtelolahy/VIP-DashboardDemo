@@ -19,16 +19,15 @@ class DashboardInteractor: DashboardInteractoring {
     
     private let presenter: DashboardPresentering
     private let service: DashboardServicing
-    var router: DashboardRouting?
+    private let router: DashboardRouting
     private var cancellables = Set<AnyCancellable>()
 
-
-    init(presenter: DashboardPresentering, service: DashboardServicing) {
+    init(presenter: DashboardPresentering, service: DashboardServicing, router: DashboardRouting) {
         self.presenter = presenter
         self.service = service
-        observeDashboard()
+        self.router = router
     }
-    
+
     private func observeDashboard() {
         service.dashboardItems.sink { [weak self] items in
             self?.presenter.presentItems(items)
@@ -37,6 +36,6 @@ class DashboardInteractor: DashboardInteractoring {
     }
 
     func onSelect(item: DashboardItem) {
-        router?.toItemDetail(item)
+        router.toItemDetail(item)
     }
 }

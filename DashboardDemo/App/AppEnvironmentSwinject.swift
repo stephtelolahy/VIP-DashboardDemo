@@ -68,8 +68,6 @@ extension AppEnvironmentSwinject: ViewProvider {
         ], container: container)
         let view = assembler.resolver.resolve(DashboardView.self)!
         let viewController = UIHostingController(rootView: view)
-//        let router = Router(current: viewController, dependencies: self)
-//        view.interactor?.router = router
         return viewController
     }
 

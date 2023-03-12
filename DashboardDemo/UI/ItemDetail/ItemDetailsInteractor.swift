@@ -13,8 +13,8 @@ protocol ItemDetailsPresenting {
 
 struct ItemDetailsInteractor: ItemDetailsInteracting {
 
-    let item: DashboardItem
-    let presenter: ItemDetailsPresenting
+    private let item: DashboardItem
+    private let presenter: ItemDetailsPresenting
 
     init(item: DashboardItem, presenter: ItemDetailsPresenting) {
         self.item = item
