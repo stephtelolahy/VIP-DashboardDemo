@@ -7,7 +7,7 @@
 
 import UIKit
 
-/// Resolving Views
+/// Configuring VIP cycle by encapsulating creation of all instances and assigning them when needed
 protocol ViewProvider {
     func dashboardViewController() -> UIViewController
     func settingsViewController() -> UIViewController

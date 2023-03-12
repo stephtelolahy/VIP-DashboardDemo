@@ -13,14 +13,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    /// Choosing dependency resolver
+    private var dependencies: ViewProvider {
+        AppEnvironmentManual.create()
+//        AppEnvironmentSwinject.create()
+    }
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
-        // First option: manual dependency resolving
-        let dependencies: ViewProvider = AppEnvironmentManual.create()
-
-        // Second option: swinject dependency resolving
-//        let dependencies: ViewProvider = ViewProviderSwinject.create()
-
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = MainViewController(dependencies: dependencies)
         window?.makeKeyAndVisible()

@@ -24,7 +24,7 @@ extension AppEnvironmentManual: ViewProvider {
         let interactor = DashboardInteractor(presenter: presenter, service: service)
         let view = DashboardView(presenter: presenter, interactor: interactor)
         let viewController = UIHostingController(rootView: view)
-        let router = Router(current: viewController, dependencies: self)
+        let router = Router(source: viewController, dependencies: self)
         interactor.router = router
         return viewController
     }

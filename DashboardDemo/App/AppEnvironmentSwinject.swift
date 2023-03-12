@@ -44,30 +44,48 @@ private class SettingsAssembly: Assembly {
     }
 }
 
-extension AppEnvironmentSwinject: ViewProvider {
-    
-//    func provideDashboardView() -> DashboardView {
-//        let assembler = Assembler([
-//            DashboardAssembly()
-//        ], container: container)
-//        return assembler.resolver.resolve(DashboardView.self)!
-//    }
-    func dashboardViewController() -> UIViewController {
-        fatalError()
+private class ItemAssembly: Assembly {
+    func assemble(container: Container) {
+        container.register(ItemDetailsPresenter.self) { _ in ItemDetailsPresenter() }
+        container.register(ItemDetailsPresenting.self) { r in r.resolve(ItemDetailsPresenter.self)! }
+        container.register(ItemDetailsInteractor.self) { r, item in ItemDetailsInteractor(item: item, presenter: r.resolve(ItemDetailsPresenting.self)!) }
+        container.register(ItemDetailsInteracting.self) { r in r.resolve(ItemDetailsInteractor.self)! }
+        container.autoregister(ItemDetailsView.self, initializer: ItemDetailsView.init)
     }
-    
-//    func provideSettingsView() -> SettingsView {
-//        let assembler = Assembler([
-//            SettingsAssembly()
-//        ], container: container)
-//        return assembler.resolver.resolve(SettingsView.self)!
-//    }
+}
+
+
+extension AppEnvironmentSwinject: ViewProvider {
+
+    /// Issues using swinject
+    /// - Error prone
+    /// - Complex resolving router
+    /// - Complex passing arguments
+
+    func dashboardViewController() -> UIViewController {
+        let assembler = Assembler([
+            DashboardAssembly()
+        ], container: container)
+        let view = assembler.resolver.resolve(DashboardView.self)!
+        let viewController = UIHostingController(rootView: view)
+//        let router = Router(current: viewController, dependencies: self)
+//        view.interactor?.router = router
+        return viewController
+    }
 
     func settingsViewController() -> UIViewController {
-        fatalError()
+        let assembler = Assembler([
+            SettingsAssembly()
+        ], container: container)
+        let view = assembler.resolver.resolve(SettingsView.self)!
+        return UIHostingController(rootView: view)
     }
 
     func itemDetailsViewController(_ item: DashboardItem) -> UIViewController {
-        fatalError()
+        let assembler = Assembler([
+            ItemAssembly()
+        ], container: container)
+        let view = assembler.resolver.resolve(ItemDetailsView.self)!
+        return UIHostingController(rootView: view)
     }
 }

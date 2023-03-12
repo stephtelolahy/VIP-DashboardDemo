@@ -1,5 +1,5 @@
 # VIP-DashboardDemo
 
-Dashboard screen  - VIP architecture - Dependency injection
+A Sample implementation of configurable Dashboard with use of VIP architecture
 
 ![](docs/dependency-injection.png)
