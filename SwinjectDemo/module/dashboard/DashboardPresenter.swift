@@ -17,6 +17,6 @@ class DashboardPresenter: ObservableObject {
 extension DashboardPresenter: DashboardPresentering {
 
     func presentItems(_ objects: [DashboardItem]) {
-        items = objects.map(\.name)
+        items = objects.map(\.rawValue)
     }
 }

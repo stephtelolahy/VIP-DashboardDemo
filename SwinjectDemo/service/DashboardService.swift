@@ -15,7 +15,7 @@ protocol DashboardServicing {
 
 struct DashboardService: DashboardServicing {
 
-    let dashboardItems: CurrentValueSubject<[DashboardItem], Never> = .init((0..<3).map { DashboardItem(name: "Item\($0)") })
+    let dashboardItems: CurrentValueSubject<[DashboardItem], Never> = .init(DashboardItem.allCases)
 
     func update(_ items: [DashboardItem]) {
         dashboardItems.send(items)

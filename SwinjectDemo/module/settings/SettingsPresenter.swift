@@ -20,7 +20,7 @@ class SettingsPresenter: ObservableObject {
 extension SettingsPresenter: SettingsPresentering {
 
     func presentItems(_ items: [DashboardItem]) {
-        position = items.firstIndex(where: { $0.name == "Item0" }) ?? -1
+        position = items.firstIndex(of: .item1) ?? -1
         count = items.count
     }
 }
