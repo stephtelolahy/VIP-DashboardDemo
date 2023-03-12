@@ -21,12 +21,14 @@ extension AppEnvironmentManual: ViewProvider {
     func dashboardViewController() -> UIViewController {
         let service: DashboardServicing = dashboardService
         let presenter = DashboardPresenter()
-        let view = DashboardView(presenter: presenter, interactor: interactor)
+        var view = DashboardView(presenter: presenter)
         let viewController = UIHostingController(rootView: view)
-        let router = Router(source: viewController, dependencies: self)
-        let interactor = DashboardInteractor(presenter: presenter, service: service, router: router)
 
-        interactor.router = router
+        // configuring view with interactor
+        let router = Router(source: viewController, dependencies: self)
+        view.interactor = DashboardInteractor(presenter: presenter, service: service, router: router)
+        viewController.rootView = view
+
         return viewController
     }
 
@@ -38,7 +40,7 @@ extension AppEnvironmentManual: ViewProvider {
         return UIHostingController(rootView: view)
     }
 
-    func itemDetailsViewController(_ item: DashboardItem) -> UIViewController {
+    func detailsViewController(for item: DashboardItem) -> UIViewController {
         let presenter = ItemDetailsPresenter()
         let interactor = ItemDetailsInteractor(item: item, presenter: presenter)
         let view = ItemDetailsView(presenter: presenter, interactor: interactor)

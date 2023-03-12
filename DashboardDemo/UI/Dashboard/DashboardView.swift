@@ -9,14 +9,11 @@ import SwiftUI
 
 struct DashboardView: View {
     @ObservedObject var presenter: DashboardPresenter
-    let interactor: DashboardInteractoring?
+    var interactor: DashboardInteractoring?
 
     var body: some View {
-        NavigationView {
-            List(presenter.items, id: \.self) { item in
-                rowView(for: item)
-            }
-            .navigationTitle("Dashboard")
+        List(presenter.items, id: \.self) { item in
+            rowView(for: item)
         }
     }
 
@@ -32,7 +29,7 @@ struct DashboardView_Previews: PreviewProvider {
     static var previews: some View {
         let data: [DashboardItem] = [.item1, .item2, .item3]
         let presenter = DashboardPresenter(items: data)
-        DashboardView(presenter: presenter, interactor: nil)
+        DashboardView(presenter: presenter)
     }
 }
 #endif

@@ -11,5 +11,5 @@ import UIKit
 protocol ViewProvider {
     func dashboardViewController() -> UIViewController
     func settingsViewController() -> UIViewController
-    func itemDetailsViewController(_ item: DashboardItem) -> UIViewController
+    func detailsViewController(for item: DashboardItem) -> UIViewController
 }

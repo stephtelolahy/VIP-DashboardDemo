@@ -26,6 +26,7 @@ class DashboardInteractor: DashboardInteractoring {
         self.presenter = presenter
         self.service = service
         self.router = router
+        observeDashboard()
     }
 
     private func observeDashboard() {

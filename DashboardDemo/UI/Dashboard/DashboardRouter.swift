@@ -12,7 +12,7 @@ protocol DashboardRouting {
 
 extension Router: DashboardRouting {
     func toItemDetail(_ item: DashboardItem) {
-        let viewController = dependencies.itemDetailsViewController(item)
+        let viewController = dependencies.detailsViewController(for: item)
         source?.navigationController?.pushViewController(viewController, animated: true)
     }
 }

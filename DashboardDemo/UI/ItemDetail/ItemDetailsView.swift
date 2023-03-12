@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ItemDetailsView: View {
     @ObservedObject var presenter: ItemDetailsPresenter
-    let interactor: ItemDetailsInteracting?
+    var interactor: ItemDetailsInteracting?
 
     var body: some View {
         Text(presenter.title)
@@ -20,7 +20,7 @@ struct ItemDetailsView: View {
 struct ItemDetailsView_Previews: PreviewProvider {
     static var previews: some View {
         let presenter = ItemDetailsPresenter(title: "My item")
-        ItemDetailsView(presenter: presenter, interactor: nil)
+        ItemDetailsView(presenter: presenter)
     }
 }
 #endif

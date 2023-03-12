@@ -79,7 +79,7 @@ extension AppEnvironmentSwinject: ViewProvider {
         return UIHostingController(rootView: view)
     }
 
-    func itemDetailsViewController(_ item: DashboardItem) -> UIViewController {
+    func detailsViewController(for item: DashboardItem) -> UIViewController {
         let assembler = Assembler([
             ItemAssembly()
         ], container: container)

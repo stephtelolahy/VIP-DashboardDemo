@@ -9,21 +9,18 @@ import SwiftUI
 
 struct SettingsView: View {
     @ObservedObject var presenter: SettingsPresenter
-    let interactor: SettingsInteractoring?
+    var interactor: SettingsInteractoring?
 
     var body: some View {
-        NavigationView {
-            VStack(spacing: 30) {
-                Text(presenter.status)
-                Button {
-                    interactor?.onReorder()
-                } label: {
-                    Text("Reorder")
-                }
-                .buttonStyle(.borderedProminent)
-
+        VStack(spacing: 30) {
+            Text(presenter.status)
+            Button {
+                interactor?.onReorder()
+            } label: {
+                Text("Reorder")
             }
-            .navigationTitle("Settings")
+            .buttonStyle(.borderedProminent)
+
         }
     }
 }
@@ -32,7 +29,7 @@ struct SettingsView: View {
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         let presenter = SettingsPresenter(status: "A - B - C")
-        SettingsView(presenter: presenter, interactor: nil)
+        SettingsView(presenter: presenter)
     }
 }
 #endif
