@@ -18,18 +18,23 @@ struct ViewProviderManual {
 
 extension ViewProviderManual: ViewProvider {
 
-    func provideDashboardView() -> DashboardView {
+    func provideDashboardViewController() -> UIViewController {
         let service: DashboardServicing = dashboardService
         let presenter = DashboardPresenter()
         let interactor = DashboardInteractor(presenter: presenter, service: service)
-        return DashboardView(presenter: presenter, interactor: interactor)
+        let view = DashboardView(presenter: presenter, interactor: interactor)
+        let viewController = UIHostingController(rootView: view)
+        let router = Router(current: viewController, dependencies: self)
+        interactor.router = router
+        return viewController
     }
 
-    func provideSettingsView() -> SettingsView {
+    func provideSettingsViewController() -> UIViewController {
         let service: DashboardServicing = dashboardService
         let presenter = SettingsPresenter()
         let interactor = SettingsInteractor(presenter: presenter, service: service)
-        return SettingsView(presenter: presenter, interactor: interactor)
+        let view = SettingsView(presenter: presenter, interactor: interactor)
+        return UIHostingController(rootView: view)
     }
 
     func provideItemDetailsView(_ item: DashboardItem) -> ItemDetailsView {

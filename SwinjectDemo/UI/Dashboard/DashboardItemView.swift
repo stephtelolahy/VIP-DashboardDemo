@@ -1,5 +1,5 @@
 //
-//  ItemView.swift
+//  DashboardItemView.swift
 //  SwinjectDemo
 //
 //  Created by Hugues Telolahy on 12/03/2023.
@@ -7,15 +7,16 @@
 
 import SwiftUI
 
-struct ItemView: View {
+struct DashboardItemView: View {
     let item: DashboardItem
+    var action: (() -> Void)?
 
     var body: some View {
         HStack {
             Text(item.rawValue)
             Spacer()
             Button {
-                print("Button was tapped")
+                action?()
             } label: {
                 Image(systemName: "info.circle")
                     .foregroundColor(.blue)
@@ -25,12 +26,8 @@ struct ItemView: View {
     }
 }
 
-struct ItemView_Previews: PreviewProvider {
+struct DashboardItemView_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            ItemView(item: .item1)
-            ItemView(item: .item2)
-        }
-        .previewLayout(.fixed(width: 300, height: 70))
+        DashboardItemView(item: .item1)
     }
 }

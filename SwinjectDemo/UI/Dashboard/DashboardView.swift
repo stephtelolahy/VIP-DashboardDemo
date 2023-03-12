@@ -21,7 +21,9 @@ struct DashboardView: View {
     }
 
     func rowView(for item: DashboardItem) -> some View {
-        ItemView(item: item)
+        DashboardItemView(item: item) {
+            interactor?.onSelect(item: item)
+        }
     }
 }
 

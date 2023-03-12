@@ -24,12 +24,10 @@
 		26DDB3C329BCCC69003288C8 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 26DDB3C229BCCC69003288C8 /* SwinjectAutoregistration */; };
 		26DDB3C529BCD10A003288C8 /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DDB3C429BCD10A003288C8 /* DashboardPresenter.swift */; };
 		26DDB3C729BCD298003288C8 /* DashboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DDB3C629BCD298003288C8 /* DashboardInteractor.swift */; };
-		26E6F0E529BDFE9A00BDD584 /* ItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E6F0E429BDFE9A00BDD584 /* ItemPresenter.swift */; };
-		26E6F0E729BDFEA500BDD584 /* ItemInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E6F0E629BDFEA500BDD584 /* ItemInteractor.swift */; };
 		26E6F0E929BE019100BDD584 /* DashboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E6F0E829BE019100BDD584 /* DashboardRouter.swift */; };
 		26E6F0ED29BE036F00BDD584 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E6F0EC29BE036F00BDD584 /* Router.swift */; };
 		26E6F0EF29BE045500BDD584 /* ItemDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E6F0EE29BE045500BDD584 /* ItemDetailsView.swift */; };
-		26F11D8429BDEA8F00171BE7 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F11D8329BDEA8F00171BE7 /* ItemView.swift */; };
+		26E6F0F129BE12E500BDD584 /* DashboardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E6F0F029BE12E500BDD584 /* DashboardItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,12 +59,10 @@
 		26DDB3BC29BCCB8E003288C8 /* DashboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardService.swift; sourceTree = "<group>"; };
 		26DDB3C429BCD10A003288C8 /* DashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
 		26DDB3C629BCD298003288C8 /* DashboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardInteractor.swift; sourceTree = "<group>"; };
-		26E6F0E429BDFE9A00BDD584 /* ItemPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPresenter.swift; sourceTree = "<group>"; };
-		26E6F0E629BDFEA500BDD584 /* ItemInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInteractor.swift; sourceTree = "<group>"; };
 		26E6F0E829BE019100BDD584 /* DashboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRouter.swift; sourceTree = "<group>"; };
 		26E6F0EC29BE036F00BDD584 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		26E6F0EE29BE045500BDD584 /* ItemDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsView.swift; sourceTree = "<group>"; };
-		26F11D8329BDEA8F00171BE7 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		26E6F0F029BE12E500BDD584 /* DashboardItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,7 +153,7 @@
 				26DDB3C429BCD10A003288C8 /* DashboardPresenter.swift */,
 				26DDB3C629BCD298003288C8 /* DashboardInteractor.swift */,
 				26E6F0E829BE019100BDD584 /* DashboardRouter.swift */,
-				26F11D8029BDEA2500171BE7 /* Item */,
+				26E6F0F029BE12E500BDD584 /* DashboardItemView.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -187,16 +183,6 @@
 				26E6F0EE29BE045500BDD584 /* ItemDetailsView.swift */,
 			);
 			path = ItemDetail;
-			sourceTree = "<group>";
-		};
-		26F11D8029BDEA2500171BE7 /* Item */ = {
-			isa = PBXGroup;
-			children = (
-				26F11D8329BDEA8F00171BE7 /* ItemView.swift */,
-				26E6F0E429BDFE9A00BDD584 /* ItemPresenter.swift */,
-				26E6F0E629BDFEA500BDD584 /* ItemInteractor.swift */,
-			);
-			path = Item;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,12 +294,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				26DDB37529BCC69D003288C8 /* AppDelegate.swift in Sources */,
-				26E6F0E529BDFE9A00BDD584 /* ItemPresenter.swift in Sources */,
 				26DDB3B329BCCA7A003288C8 /* DashboardItem.swift in Sources */,
-				26E6F0E729BDFEA500BDD584 /* ItemInteractor.swift in Sources */,
 				26DDB3C529BCD10A003288C8 /* DashboardPresenter.swift in Sources */,
 				260876B229BCEAB3005E6ECE /* ViewProviderManual.swift in Sources */,
 				260876B429BCEBF3005E6ECE /* ViewProviderSwinject.swift in Sources */,
+				26E6F0F129BE12E500BDD584 /* DashboardItemView.swift in Sources */,
 				26DDB3BD29BCCB8E003288C8 /* DashboardService.swift in Sources */,
 				26959F4829BD9F4700BCF3F7 /* DashboardView.swift in Sources */,
 				26E6F0E929BE019100BDD584 /* DashboardRouter.swift in Sources */,
@@ -321,7 +306,6 @@
 				26959F4A29BDA50D00BCF3F7 /* SettingsPresenter.swift in Sources */,
 				26E6F0EF29BE045500BDD584 /* ItemDetailsView.swift in Sources */,
 				260876AE29BCE89D005E6ECE /* ViewProvider.swift in Sources */,
-				26F11D8429BDEA8F00171BE7 /* ItemView.swift in Sources */,
 				26DDB3C729BCD298003288C8 /* DashboardInteractor.swift in Sources */,
 				26868FE129BCF040009EB390 /* SettingsView.swift in Sources */,
 				26959F4C29BDA51700BCF3F7 /* SettingsInteractor.swift in Sources */,

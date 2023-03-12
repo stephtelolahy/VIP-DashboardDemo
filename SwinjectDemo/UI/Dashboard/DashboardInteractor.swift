@@ -8,6 +8,7 @@
 import Combine
 
 protocol DashboardInteractoring {
+    func onSelect(item: DashboardItem)
 }
 
 protocol DashboardPresentering {
@@ -18,7 +19,9 @@ class DashboardInteractor: DashboardInteractoring {
     
     private let presenter: DashboardPresentering
     private let service: DashboardServicing
+    var router: DashboardRouting?
     private var cancellables = Set<AnyCancellable>()
+
 
     init(presenter: DashboardPresentering, service: DashboardServicing) {
         self.presenter = presenter
@@ -31,5 +34,9 @@ class DashboardInteractor: DashboardInteractoring {
             self?.presenter.presentItems(items)
         }
         .store(in: &cancellables)
+    }
+
+    func onSelect(item: DashboardItem) {
+        router?.toItemDetail(item)
     }
 }

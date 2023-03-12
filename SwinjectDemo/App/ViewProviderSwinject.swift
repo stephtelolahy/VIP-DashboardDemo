@@ -46,18 +46,25 @@ private class SettingsAssembly: Assembly {
 
 extension ViewProviderSwinject: ViewProvider {
     
-    func provideDashboardView() -> DashboardView {
-        let assembler = Assembler([
-            DashboardAssembly()
-        ], container: container)
-        return assembler.resolver.resolve(DashboardView.self)!
+//    func provideDashboardView() -> DashboardView {
+//        let assembler = Assembler([
+//            DashboardAssembly()
+//        ], container: container)
+//        return assembler.resolver.resolve(DashboardView.self)!
+//    }
+    func provideDashboardViewController() -> UIViewController {
+        fatalError()
     }
     
-    func provideSettingsView() -> SettingsView {
-        let assembler = Assembler([
-            SettingsAssembly()
-        ], container: container)
-        return assembler.resolver.resolve(SettingsView.self)!
+//    func provideSettingsView() -> SettingsView {
+//        let assembler = Assembler([
+//            SettingsAssembly()
+//        ], container: container)
+//        return assembler.resolver.resolve(SettingsView.self)!
+//    }
+
+    func provideSettingsViewController() -> UIViewController {
+        fatalError()
     }
 
     func provideItemDetailsView(_ item: DashboardItem) -> ItemDetailsView {
