@@ -2,4 +2,4 @@
 
 Dashboard screen  - VIP architecture - Dependency injection
 
-![](docs/dependency-injection.pdf)
+![](docs/dependency-injection.png)

@@ -10,6 +10,7 @@
 		260876AE29BCE89D005E6ECE /* ViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260876AD29BCE89D005E6ECE /* ViewProvider.swift */; };
 		260876B229BCEAB3005E6ECE /* AppEnvironmentManual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260876B129BCEAB3005E6ECE /* AppEnvironmentManual.swift */; };
 		260876B429BCEBF3005E6ECE /* AppEnvironmentSwinject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260876B329BCEBF3005E6ECE /* AppEnvironmentSwinject.swift */; };
+		267B3E6C29BE356A00B37B86 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 267B3E6B29BE356A00B37B86 /* README.md */; };
 		26868FE129BCF040009EB390 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26868FE029BCF040009EB390 /* SettingsView.swift */; };
 		269157FD29BE1DD400BBB9E9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269157FC29BE1DD400BBB9E9 /* MainViewController.swift */; };
 		26921BAF29BE27A600177727 /* ItemDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26921BAE29BE27A600177727 /* ItemDetailsPresenter.swift */; };
@@ -47,6 +48,7 @@
 		260876AD29BCE89D005E6ECE /* ViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProvider.swift; sourceTree = "<group>"; };
 		260876B129BCEAB3005E6ECE /* AppEnvironmentManual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironmentManual.swift; sourceTree = "<group>"; };
 		260876B329BCEBF3005E6ECE /* AppEnvironmentSwinject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironmentSwinject.swift; sourceTree = "<group>"; };
+		267B3E6B29BE356A00B37B86 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		26868FE029BCF040009EB390 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		269157FC29BE1DD400BBB9E9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		26921BAE29BE27A600177727 /* ItemDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsPresenter.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 		26DDB36829BCC69D003288C8 = {
 			isa = PBXGroup;
 			children = (
+				267B3E6B29BE356A00B37B86 /* README.md */,
 				26DDB37329BCC69D003288C8 /* DashboardDemo */,
 				26DDB38A29BCC69E003288C8 /* DashboardDemoTests */,
 				26DDB37229BCC69D003288C8 /* Products */,
@@ -299,6 +302,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				267B3E6C29BE356A00B37B86 /* README.md in Resources */,
 				26DDB38129BCC69E003288C8 /* LaunchScreen.storyboard in Resources */,
 				26DDB37E29BCC69E003288C8 /* Assets.xcassets in Resources */,
 			);
