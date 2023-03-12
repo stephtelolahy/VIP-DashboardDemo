@@ -9,7 +9,7 @@ import SwinjectAutoregistration
 import UIKit
 import SwiftUI
 
-/// Trying to resolve dependencies with `Swinject`
+/// Dependency injection with `Swinject`
 /// Notable Issues
 /// - Error prone
 /// - Complex resolving router

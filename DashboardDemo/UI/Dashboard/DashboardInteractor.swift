@@ -19,10 +19,10 @@ class DashboardInteractor: DashboardInteractoring {
     
     private let presenter: DashboardPresentering
     private let service: DashboardServicing
-    private let router: DashboardRouting
+    private let router: ItemDetailsRouting
     private var cancellables = Set<AnyCancellable>()
 
-    init(presenter: DashboardPresentering, service: DashboardServicing, router: DashboardRouting) {
+    init(presenter: DashboardPresentering, service: DashboardServicing, router: ItemDetailsRouting) {
         self.presenter = presenter
         self.service = service
         self.router = router

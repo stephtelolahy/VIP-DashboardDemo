@@ -1,21 +1,22 @@
 //
-//  DashboardRouter.swift
-//  SwinjectDemo
+//  ItemDetailsRouter.swift
+//  DashboardDemo
 //
 //  Created by Hugues Telolahy on 12/03/2023.
 //
 import UIKit
 
-protocol DashboardRouting {
+protocol ItemDetailsRouting {
     func toItemDetail(_ item: DashboardItem)
 }
 
-struct DashboardRouter: DashboardRouting {
+struct ItemDetailsRouter: ItemDetailsRouting {
     weak var source: UIViewController?
-    let dependencies: DashboardConfigurator
+    let dependencies: ItemDetailsConfigurator
 
     func toItemDetail(_ item: DashboardItem) {
         let viewController = dependencies.detailsViewController(for: item)
         source?.navigationController?.pushViewController(viewController, animated: true)
     }
 }
+

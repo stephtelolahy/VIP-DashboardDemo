@@ -19,6 +19,8 @@
 		2698158F29BE7206005AFDB5 /* DashboardConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698158E29BE7206005AFDB5 /* DashboardConfigurator.swift */; };
 		2698159129BE727D005AFDB5 /* SettingsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698159029BE727D005AFDB5 /* SettingsConfigurator.swift */; };
 		2698159329BE7714005AFDB5 /* TabBarConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698159229BE7714005AFDB5 /* TabBarConfigurator.swift */; };
+		2698159629BE7C97005AFDB5 /* ItemDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698159529BE7C97005AFDB5 /* ItemDetailsRouter.swift */; };
+		2698159829BE7D25005AFDB5 /* ItemDetailsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2698159729BE7D25005AFDB5 /* ItemDetailsConfigurator.swift */; };
 		26DDB37529BCC69D003288C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DDB37429BCC69D003288C8 /* AppDelegate.swift */; };
 		26DDB37E29BCC69E003288C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26DDB37D29BCC69E003288C8 /* Assets.xcassets */; };
 		26DDB38129BCC69E003288C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26DDB37F29BCC69E003288C8 /* LaunchScreen.storyboard */; };
@@ -29,7 +31,6 @@
 		26DDB3C329BCCC69003288C8 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 26DDB3C229BCCC69003288C8 /* SwinjectAutoregistration */; };
 		26DDB3C529BCD10A003288C8 /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DDB3C429BCD10A003288C8 /* DashboardPresenter.swift */; };
 		26DDB3C729BCD298003288C8 /* DashboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DDB3C629BCD298003288C8 /* DashboardInteractor.swift */; };
-		26E6F0E929BE019100BDD584 /* DashboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E6F0E829BE019100BDD584 /* DashboardRouter.swift */; };
 		26E6F0EF29BE045500BDD584 /* ItemDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E6F0EE29BE045500BDD584 /* ItemDetailsView.swift */; };
 		26E6F0F129BE12E500BDD584 /* DashboardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E6F0F029BE12E500BDD584 /* DashboardItemView.swift */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,8 @@
 		2698158E29BE7206005AFDB5 /* DashboardConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardConfigurator.swift; sourceTree = "<group>"; };
 		2698159029BE727D005AFDB5 /* SettingsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsConfigurator.swift; sourceTree = "<group>"; };
 		2698159229BE7714005AFDB5 /* TabBarConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarConfigurator.swift; sourceTree = "<group>"; };
+		2698159529BE7C97005AFDB5 /* ItemDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsRouter.swift; sourceTree = "<group>"; };
+		2698159729BE7D25005AFDB5 /* ItemDetailsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsConfigurator.swift; sourceTree = "<group>"; };
 		26DDB37129BCC69D003288C8 /* DashboardDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DashboardDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26DDB37429BCC69D003288C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26DDB37D29BCC69E003288C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,7 +71,6 @@
 		26DDB3BC29BCCB8E003288C8 /* DashboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardService.swift; sourceTree = "<group>"; };
 		26DDB3C429BCD10A003288C8 /* DashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
 		26DDB3C629BCD298003288C8 /* DashboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardInteractor.swift; sourceTree = "<group>"; };
-		26E6F0E829BE019100BDD584 /* DashboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRouter.swift; sourceTree = "<group>"; };
 		26E6F0EE29BE045500BDD584 /* ItemDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsView.swift; sourceTree = "<group>"; };
 		26E6F0F029BE12E500BDD584 /* DashboardItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,6 +166,7 @@
 			children = (
 				2698159429BE778A005AFDB5 /* TabBar */,
 				26DDB3B729BCCB1E003288C8 /* Dashboard */,
+				26E6F0EA29BE025400BDD584 /* ItemDetail */,
 				26DDB3B829BCCB24003288C8 /* Settings */,
 			);
 			path = UI;
@@ -172,12 +175,10 @@
 		26DDB3B729BCCB1E003288C8 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				26E6F0EA29BE025400BDD584 /* ItemDetail */,
 				26921BB029BE29EF00177727 /* Rows */,
 				26959F4729BD9F4700BCF3F7 /* DashboardView.swift */,
 				26DDB3C429BCD10A003288C8 /* DashboardPresenter.swift */,
 				26DDB3C629BCD298003288C8 /* DashboardInteractor.swift */,
-				26E6F0E829BE019100BDD584 /* DashboardRouter.swift */,
 				2698158E29BE7206005AFDB5 /* DashboardConfigurator.swift */,
 			);
 			path = Dashboard;
@@ -209,6 +210,8 @@
 				26E6F0EE29BE045500BDD584 /* ItemDetailsView.swift */,
 				26921BAE29BE27A600177727 /* ItemDetailsPresenter.swift */,
 				26921BB129BE2A2600177727 /* ItemDetailsInteractor.swift */,
+				2698159529BE7C97005AFDB5 /* ItemDetailsRouter.swift */,
+				2698159729BE7D25005AFDB5 /* ItemDetailsConfigurator.swift */,
 			);
 			path = ItemDetail;
 			sourceTree = "<group>";
@@ -326,14 +329,15 @@
 				26DDB3B329BCCA7A003288C8 /* DashboardItem.swift in Sources */,
 				26DDB3C529BCD10A003288C8 /* DashboardPresenter.swift in Sources */,
 				260876B229BCEAB3005E6ECE /* AppEnvironment.swift in Sources */,
+				2698159629BE7C97005AFDB5 /* ItemDetailsRouter.swift in Sources */,
 				2698159329BE7714005AFDB5 /* TabBarConfigurator.swift in Sources */,
 				260876B429BCEBF3005E6ECE /* AppEnvironmentSwinject.swift in Sources */,
 				26E6F0F129BE12E500BDD584 /* DashboardItemView.swift in Sources */,
 				26DDB3BD29BCCB8E003288C8 /* DashboardService.swift in Sources */,
 				26959F4829BD9F4700BCF3F7 /* DashboardView.swift in Sources */,
-				26E6F0E929BE019100BDD584 /* DashboardRouter.swift in Sources */,
 				26921BAF29BE27A600177727 /* ItemDetailsPresenter.swift in Sources */,
 				26959F4A29BDA50D00BCF3F7 /* SettingsPresenter.swift in Sources */,
+				2698159829BE7D25005AFDB5 /* ItemDetailsConfigurator.swift in Sources */,
 				26E6F0EF29BE045500BDD584 /* ItemDetailsView.swift in Sources */,
 				26DDB3C729BCD298003288C8 /* DashboardInteractor.swift in Sources */,
 				26921BB229BE2A2600177727 /* ItemDetailsInteractor.swift in Sources */,

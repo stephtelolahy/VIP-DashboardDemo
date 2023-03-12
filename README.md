@@ -37,3 +37,12 @@ A Sample implementation of configurable Dashboard with use of VIP architecture
 - `struct`
 - Configuring VIP cycle
 - Creates all VIP componenets instances
+
+
+## Features
+- [x] Shared worker
+- [x] Scalable configurator
+- [ ] ChildView VIP
+- [ ] Default Router
+
+
