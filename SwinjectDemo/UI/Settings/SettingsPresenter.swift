@@ -8,19 +8,16 @@
 import Combine
 
 class SettingsPresenter: ObservableObject {
-    @Published var position: Int
-    @Published var count: Int
+    @Published var status: String
 
-    init(position: Int = -1, count: Int = 0) {
-        self.position = position
-        self.count = count
+    init(status: String = "") {
+        self.status = status
     }
 }
 
 extension SettingsPresenter: SettingsPresentering {
 
     func presentItems(_ items: [DashboardItem]) {
-        position = items.firstIndex(of: .item1) ?? -1
-        count = items.count
+        status = items.map(\.rawValue).joined(separator: " - ")
     }
 }
