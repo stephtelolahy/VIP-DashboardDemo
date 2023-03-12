@@ -159,8 +159,8 @@
 		26DDB3B929BCCB31003288C8 /* service */ = {
 			isa = PBXGroup;
 			children = (
-				26DDB3BC29BCCB8E003288C8 /* DashboardService.swift */,
 				26DDB3B229BCCA7A003288C8 /* DashboardItem.swift */,
+				26DDB3BC29BCCB8E003288C8 /* DashboardService.swift */,
 			);
 			path = service;
 			sourceTree = "<group>";

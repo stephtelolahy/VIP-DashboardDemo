@@ -36,7 +36,8 @@ class SettingsInteractor: SettingsInteractoring {
 
     func onReorder() {
         var items: [DashboardItem] = service.dashboardItems.value
-        items.shuffle()
+        let last = items.removeLast()
+        items.insert(last, at: 0)
         service.update(items)
     }
 }
